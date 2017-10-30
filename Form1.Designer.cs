@@ -31,6 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkWithHyphen = new System.Windows.Forms.CheckBox();
             this.rdo3 = new System.Windows.Forms.RadioButton();
             this.rdo2 = new System.Windows.Forms.RadioButton();
             this.rdo1 = new System.Windows.Forms.RadioButton();
@@ -77,6 +78,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.chkWithHyphen);
             this.groupBox4.Controls.Add(this.rdo3);
             this.groupBox4.Controls.Add(this.rdo2);
             this.groupBox4.Controls.Add(this.rdo1);
@@ -88,10 +90,23 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Facing";
             // 
+            // chkWithHyphen
+            // 
+            this.chkWithHyphen.AutoSize = true;
+            this.chkWithHyphen.Checked = true;
+            this.chkWithHyphen.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWithHyphen.Location = new System.Drawing.Point(39, 49);
+            this.chkWithHyphen.Name = "chkWithHyphen";
+            this.chkWithHyphen.Size = new System.Drawing.Size(170, 25);
+            this.chkWithHyphen.TabIndex = 3;
+            this.chkWithHyphen.Text = "with hyphen \"-\"";
+            this.chkWithHyphen.UseVisualStyleBackColor = true;
+            this.chkWithHyphen.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // rdo3
             // 
             this.rdo3.AutoSize = true;
-            this.rdo3.Location = new System.Drawing.Point(512, 49);
+            this.rdo3.Location = new System.Drawing.Point(574, 49);
             this.rdo3.Name = "rdo3";
             this.rdo3.Size = new System.Drawing.Size(55, 25);
             this.rdo3.TabIndex = 2;
@@ -102,7 +117,7 @@
             // rdo2
             // 
             this.rdo2.AutoSize = true;
-            this.rdo2.Location = new System.Drawing.Point(378, 49);
+            this.rdo2.Location = new System.Drawing.Point(477, 49);
             this.rdo2.Name = "rdo2";
             this.rdo2.Size = new System.Drawing.Size(55, 25);
             this.rdo2.TabIndex = 1;
@@ -113,7 +128,7 @@
             // rdo1
             // 
             this.rdo1.AutoSize = true;
-            this.rdo1.Location = new System.Drawing.Point(236, 49);
+            this.rdo1.Location = new System.Drawing.Point(372, 49);
             this.rdo1.Name = "rdo1";
             this.rdo1.Size = new System.Drawing.Size(63, 25);
             this.rdo1.TabIndex = 0;
@@ -125,7 +140,7 @@
             // 
             this.rdoNone.AutoSize = true;
             this.rdoNone.Checked = true;
-            this.rdoNone.Location = new System.Drawing.Point(94, 49);
+            this.rdoNone.Location = new System.Drawing.Point(251, 49);
             this.rdoNone.Name = "rdoNone";
             this.rdoNone.Size = new System.Drawing.Size(79, 25);
             this.rdoNone.TabIndex = 0;
@@ -241,6 +256,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rdoLower;
         private System.Windows.Forms.RadioButton rdoUpper;
+        private System.Windows.Forms.CheckBox chkWithHyphen;
     }
 }
 

@@ -55,6 +55,11 @@ namespace GUIDMaker2
                 strResult = strGUID.ToLower();
             }
 
+            if (!chkWithHyphen.Checked)
+            {
+                strResult = strResult.Replace("-", "");
+            }
+
             string strFormat = string.Empty;
             if (!rdoNone.Checked)
             {
@@ -64,12 +69,23 @@ namespace GUIDMaker2
                 strResult = string.Format(strFormat, strResult);
             }
 
+            //txtGUID.Text = strResult;
+            //Clipboard.SetText(strResult);
+
             return strResult;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            string strResult = ReturnGUIDStringValue();
+
+            txtGUID.Text = strResult;
+            Clipboard.SetText(strResult);
         }
     }
 }
